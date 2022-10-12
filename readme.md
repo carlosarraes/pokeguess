@@ -6,7 +6,7 @@ Brincando com a PokeApi!
 
 - [x] Estrutura
 - [x] Get da Api
-- [ ] Jogabilidade
+- [x] Jogabilidade
 
 ### Tecnologias
 

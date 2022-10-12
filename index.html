@@ -15,12 +15,10 @@
         <!-- Modal -->
         <div
           id="modal"
-          class="absolute top-0 right-50 m-5 font-bold capitalize py-2 px-8 rounded z-10 hidden"
-        >
-          teste
-        </div>
+          class="absolute top-0 right-50 m-5 font-bold py-2 px-8 rounded z-10 hidden opacity-70"
+        ></div>
         <main
-          class="flex flex-col bg-gray-50 rounded shadow-xl gap-8 p-8 justify-center items-center max-w-xl sm:flex-row"
+          class="flex flex-col bg-gray-50 rounded shadow-xl gap-16 p-8 justify-center items-center max-w-xl sm:flex-row"
         >
           <!-- Imagem -->
           <section class="relative self-center">
@@ -41,9 +39,9 @@
               </p>
             </section>
             <!-- Blur -->
-            <section class="text-left flex">
-              <h4 class="text-xl">Nivel do blur:</h4>
-              <div id="difficulty"></div>
+            <section class="text-left flex justify-between items-center align-center">
+              <h4 class="text-x self-center">Tentativas:</h4>
+              <div id="difficulty" class="flex justify-center items-center gap-1"></div>
             </section>
             <section class="flex flex-col gap-2">
               <input
