@@ -12,6 +12,9 @@ const root = document.getElementById('root');
 const type = document.getElementById('type');
 const weight = document.getElementById('weight');
 const height = document.getElementById('height');
+const btn = document.getElementById('btn-new');
+const modal = document.getElementById('modal');
+const answer = document.getElementById('answer');
 function fetchPokemon(numPokemon) {
     return __awaiter(this, void 0, void 0, function* () {
         const num = Math.floor(Math.random() * numPokemon + 1);
@@ -20,6 +23,7 @@ function fetchPokemon(numPokemon) {
         root.innerHTML = '';
         const img = document.createElement('img');
         // Imagem
+        img.classList.add('w-72');
         img.src = data.sprites.other.dream_world.front_default;
         // Adicioan Tipos
         if (data.types.length > 1) {
@@ -41,7 +45,35 @@ function fetchPokemon(numPokemon) {
         img.classList.add('fill-black');
         // Faz Append da imagem
         root.appendChild(img);
-        console.log(data);
+        return data.name;
     });
 }
-fetchPokemon(151);
+window.onload = () => __awaiter(void 0, void 0, void 0, function* () {
+    function handleModal(state, msg) {
+        if (state === 'success') {
+            modal.classList.add('bg-green-400');
+            modal.classList.remove('hidden');
+            modal.innerText = msg;
+        }
+        if (state === 'failed') {
+            console.log('entrei no fail');
+            modal.classList.add('bg-red-400');
+            modal.classList.remove('hidden');
+            modal.innerText = msg;
+        }
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 3000);
+    }
+    function handleSubmit(e) {
+        if (answer.value.toLowerCase() === data) {
+            handleModal('success', 'Acertou!');
+        }
+        else {
+            handleModal('failed', 'Errou, diminuindo blur!');
+        }
+    }
+    const data = yield fetchPokemon(151);
+    console.log(data);
+    btn.addEventListener('click', handleSubmit);
+});
