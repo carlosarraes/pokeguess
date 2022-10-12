@@ -132,7 +132,7 @@ window.onload = async () => {
 
   function handleSubmit(e: MouseEvent) {
     if (answer.value.toLowerCase() === data) {
-      handleModal('success', 'Acertou! Iremos reiniciar o jogo em 5s', 5000);
+      handleModal('success', 'Acertou! Reiniciando o jogo em 5s', 5000);
     } else {
       handleModal('failed', 'Errou, diminuindo blur!', 1000);
     }
@@ -141,7 +141,7 @@ window.onload = async () => {
   function handleEnter(e: KeyboardEvent) {
     if (e.key === 'Enter') {
       if (answer.value.toLowerCase() === data) {
-        handleModal('success', 'Acertou! Iremos reiniciar o jogo em 5s', 5000);
+        handleModal('success', 'Acertou! Reiniciando o jogo em 5s', 5000);
       } else {
         handleModal('failed', 'Errou, diminuindo blur!', 1000);
       }

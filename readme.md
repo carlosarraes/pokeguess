@@ -7,9 +7,9 @@ Brincando com a PokeApi!
 - [x] Estrutura
 - [x] Get da Api
 - [x] Jogabilidade
-- [ ] Mudar alguns textos
-- [ ] Melhorar responsividade
-- [ ] Adicionar footer
+- [x] Mudar alguns textos
+- [x] Melhorar responsividade
+- [x] Adicionar footer
 
 ### Tecnologias
 

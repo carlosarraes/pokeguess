@@ -134,7 +134,7 @@ window.onload = () => __awaiter(void 0, void 0, void 0, function* () {
     }
     function handleSubmit(e) {
         if (answer.value.toLowerCase() === data) {
-            handleModal('success', 'Acertou! Iremos reiniciar o jogo em 5s', 5000);
+            handleModal('success', 'Acertou! Reiniciando o jogo em 5s', 5000);
         }
         else {
             handleModal('failed', 'Errou, diminuindo blur!', 1000);
@@ -143,7 +143,7 @@ window.onload = () => __awaiter(void 0, void 0, void 0, function* () {
     function handleEnter(e) {
         if (e.key === 'Enter') {
             if (answer.value.toLowerCase() === data) {
-                handleModal('success', 'Acertou! Iremos reiniciar o jogo em 5s', 5000);
+                handleModal('success', 'Acertou! Reiniciando o jogo em 5s', 5000);
             }
             else {
                 handleModal('failed', 'Errou, diminuindo blur!', 1000);
